@@ -14,7 +14,14 @@
 
 \mode<presentation>
 
-\setbeamertemplate{footline}[frame number]
+%\setbeamertemplate{footline}[frame number]
+\setbeamertemplate{footline}
+{ \usebeamercolor[fg]{page number in head/foot}%
+  \usebeamerfont{page number in head/foot}%
+  \hspace{1em}\insertshorttitle\hfill%
+  \insertframenumber\,/\,\inserttotalframenumber\kern1em\vskip2pt%
+}
+
 \setbeamertemplate{navigation symbols}{}
 \setbeamertemplate{blocks}[rounded][shadow=true]
 
