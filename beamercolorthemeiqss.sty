@@ -32,10 +32,23 @@
 \definecolor{iqss@red}{rgb}{0.65, 0.11 0.19}
 \definecolor{iqss@gray}{rgb}{0.95,0.95,0.95}
 
-\newcommand{\alertb}[1]{\textcolor{iqss@purple}{#1}}
-\newcommand{\alertc}[1]{\textcolor{iqss@green}{#1}}
-\newcommand{\alertd}[1]{\textcolor{iqss@red}{#1}}
-\newcommand{\alerte}[1]{\textcolor{iqss@yellow}{#1}}
+\newcommand<>{\alertb}[1]{\setbeamercolor{alerted text}{fg=iqss@purple}%
+  \begin{alertenv}#2\relax#1\end{alertenv}%
+  \setbeamercolor{alerted text}{fg=iqss@blue}%
+}
+\newcommand<>{\alertc}[1]{\setbeamercolor{alerted text}{fg=iqss@green}%
+  \begin{alertenv}#2\relax#1\end{alertenv}%
+  \setbeamercolor{alerted text}{fg=iqss@blue}%
+}
+\newcommand<>{\alertd}[1]{\setbeamercolor{alerted text}{fg=iqss@red}%
+  \begin{alertenv}#2\relax#1\end{alertenv}%
+  \setbeamercolor{alerted text}{fg=iqss@blue}%
+}
+\newcommand<>{\alerte}[1]{\setbeamercolor{alerted text}{fg=iqss@yellow}%
+  \begin{alertenv}#2\relax#1\end{alertenv}%
+  \setbeamercolor{alerted text}{fg=iqss@blue}%
+}
+
 
 \setbeamercolor{normal text}{fg=black,bg=white}
 \setbeamercolor{alerted text}{fg=iqss@blue}
