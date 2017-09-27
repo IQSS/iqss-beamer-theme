@@ -8,6 +8,8 @@
 % 2. under the GNU Public License.
 %
 
+\RequirePackage{listings}
+
 \mode<presentation>
 
 % - Main color BLUE (Title, bullets, arrows)
@@ -31,6 +33,16 @@
 \definecolor{iqss@green}{rgb}{0.341, 0.553 0.090}
 \definecolor{iqss@red}{rgb}{0.65, 0.11 0.19}
 \definecolor{iqss@gray}{rgb}{0.95,0.95,0.95}
+
+\lstset{ %
+  basicstyle=\ttfamily,
+  backgroundcolor=\color{iqss@gray},
+  commentstyle=\color{iqss@green},
+  keepspaces=true,
+  keywordstyle=\color{iqss@blue},
+  showtabs=false,
+  stringstyle=\color{iqss@purple},
+}
 
 \newcommand<>{\alertb}[1]{\setbeamercolor{alerted text}{fg=iqss@purple}%
   \begin{alertenv}#2\relax#1\end{alertenv}%
