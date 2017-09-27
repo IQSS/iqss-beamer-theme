@@ -155,12 +155,42 @@
 \end{frame}
 
 \begin{frame}[fragile]
+  \frametitle{Code blocks}
+
 \begin{lstlisting}[language=R]
- ## A function that says hello to you
- hello <- function(name) {
-      paste("hello", name)
- }
+# Say hello in R
+hello <- function(name) paste("hello", name)
 \end{lstlisting}
+
+\begin{uncoverenv}<2->
+\begin{lstlisting}[language=Python]
+# Say hello in Python
+def hello(name):
+return("Hello" + " " + name)
+\end{lstlisting}
+\end{uncoverenv}
+
+\begin{uncoverenv}<3->
+\begin{lstlisting}[language=Haskell]
+-- Say hello in Haskell
+hello name = "Hello" ++ " " ++ name
+\end{lstlisting}
+\end{uncoverenv}
+
+\begin{uncoverenv}<4->
+\begin{lstlisting}[language=C]
+/* Say hello in C */
+#include <stdio.h>
+int main()
+{
+  char name[256];
+  fgets(name, sizeof(name), stdin);
+  printf("Hello %s", name);
+  return(0);
+}
+\end{lstlisting}
+\end{uncoverenv}
+
 \end{frame}
 
 \begin{frame}
