@@ -5,6 +5,8 @@
 \usepackage{textcomp}
 \usetheme{iqss}
 
+\AtBeginSection{\frame{\sectionpage\tableofcontents[currentsection]}} 
+ 
 %% \hypersetup{colorlinks=true,urlcolor=orange}
 
 
@@ -17,17 +19,9 @@
 
 \begin{document}
 
-\begin{frame}
-  \maketitle
-\end{frame}
-
-\begin{frame}
-  \frametitle{Overview}
-  \tableofcontents
-\end{frame}
+\frame{\maketitle}
 
 \section{Beamer Features}
-
 
 \subsection{Some of Gary's Examples}
 
@@ -130,6 +124,7 @@
   \alert{this should be blue!}
 \end{frame}
 
+\section{Other features}
 
 \subsection{Structural Features}
 
@@ -208,7 +203,7 @@ int main()
 \end{frame}
   
 
-\subsection{Other Features}
+\section{More Features}
 
 \begin{frame}
   \frametitle{Other Features}
