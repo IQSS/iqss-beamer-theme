@@ -57,7 +57,9 @@
   \title{\insertpart}
   \begin{frame}
     \begin{beamercolorbox}[sep=12pt,center]{part title}
-      \usebeamerfont{part title}\partname~\insertromanpartnumber\par
+      \hypersetup{allcolors=white}
+      \usebeamerfont{part title}\partname~\insertromanpartnumber: \insertpart
+      \hypersetup{allcolors=iqss@orange}
     \end{beamercolorbox}
     \tableofcontents
   \end{frame}
