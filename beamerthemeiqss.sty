@@ -18,9 +18,12 @@
 \setbeamertemplate{footline}
 { \usebeamercolor[fg]{page number in head/foot}%
   \usebeamerfont{page number in head/foot}%
+  % \hspace{1em}\insertshorttitle\hfill%
   \hspace{1em}\insertshorttitle\hfill%
   \insertframenumber\,/\,\inserttotalframenumber\kern1em\vskip2pt%
 }
+
+\hypersetup{colorlinks=true,allcolors=iqss@orange}
 
 \setbeamertemplate{navigation symbols}{}
 \setbeamertemplate{blocks}[rounded][shadow=true]
@@ -31,6 +34,8 @@
 \useoutertheme{default}
 
 \setbeamertemplate{itemize items}[circle]
+
+\AtBeginSection{\frame{\sectionpage\tableofcontents[currentsection]}\title{\insertsectionhead}}
 
 \mode
 <all>
