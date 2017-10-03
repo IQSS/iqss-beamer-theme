@@ -34,35 +34,14 @@
 
 \setbeamertemplate{itemize items}[circle]
 
-% \AtBeginSection{
-%   \begin{frame}
-%     \hypersetup{allcolors=white}
-%     \hypersetup{allcolors=iqss@orange}
-%     \tableofcontents[currentsection]
-%     \title{\insertsectionhead}
-%   \end{frame}
-% }
-
 \AtBeginSection{
-  \title{\insertsectionhead}
-  \begin{frame}
-    \begin{beamercolorbox}[sep=12pt,center]{part title}
-      \usebeamerfont{section title}\sectionname~\insertsectionnumber\par
-    \end{beamercolorbox}
-    \tableofcontents[currentsection]
-  \end{frame}
-}
-
-\AtBeginPart{
-  \title{\insertpart}
-  \begin{frame}
-    \begin{beamercolorbox}[sep=12pt,center]{part title}
-      \hypersetup{allcolors=white}
-      \usebeamerfont{part title}\partname~\insertromanpartnumber: \insertpart
-      \hypersetup{allcolors=iqss@orange}
-    \end{beamercolorbox}
-    \tableofcontents
-  \end{frame}
+  \setbeamertemplate{footline}
+  { \usebeamercolor[fg]{page number in head/foot}%
+    \usebeamerfont{page number in head/foot}%
+    \hspace{1em}\insertsectionhead\hfill%
+    \insertframenumber\,/\,\inserttotalframenumber\kern1em\vskip2pt%
+  }
+  \frame[plain]{\tableofcontents[currentsection]}
 }
 
 \mode
