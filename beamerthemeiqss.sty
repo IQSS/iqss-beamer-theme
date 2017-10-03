@@ -34,9 +34,34 @@
 
 \setbeamertemplate{itemize items}[circle]
 
-\AtBeginSection{\frame{\sectionpage\tableofcontents[currentsection]}\title{\insertsectionhead}}
+% \AtBeginSection{
+%   \begin{frame}
+%     \hypersetup{allcolors=white}
+%     \hypersetup{allcolors=iqss@orange}
+%     \tableofcontents[currentsection]
+%     \title{\insertsectionhead}
+%   \end{frame}
+% }
 
-\AtBeginPart{\frame{\partpage\tableofcontents}}
+\AtBeginSection{
+  \title{\insertsectionhead}
+  \begin{frame}
+    \begin{beamercolorbox}[sep=12pt,center]{part title}
+      \usebeamerfont{section title}\sectionname~\insertsectionnumber\par
+    \end{beamercolorbox}
+    \tableofcontents[currentsection]
+  \end{frame}
+}
+
+\AtBeginPart{
+  \title{\insertpart}
+  \begin{frame}
+    \begin{beamercolorbox}[sep=12pt,center]{part title}
+      \usebeamerfont{part title}\partname~\insertromanpartnumber\par
+    \end{beamercolorbox}
+    \tableofcontents
+  \end{frame}
+}
 
 \mode
 <all>
