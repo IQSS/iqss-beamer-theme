@@ -35,13 +35,13 @@
 \setbeamertemplate{itemize items}[circle]
 
 \AtBeginSection{
-  \setbeamertemplate{footline}
-  { \usebeamercolor[fg]{page number in head/foot}%
-    \usebeamerfont{page number in head/foot}%
-    \hspace{1em}\insertsectionhead\hfill%
-    \insertframenumber\,/\,\inserttotalframenumber\kern1em\vskip2pt%
-  }
-  \frame[plain]{\tableofcontents[currentsection]}
+  \title{\insertsectionhead}
+    \frame{\tableofcontents[currentsection]}
+}
+
+\AtBeginPart{
+  \title{\insertpart}
+    \frame{\tableofcontents}
 }
 
 \mode
