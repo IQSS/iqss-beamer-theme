@@ -24,6 +24,42 @@
   \insertframenumber\,/\,\inserttotalframenumber\kern1em\vskip2pt%
 }
 
+\titlegraphic{\includegraphics[width=\paperwidth]{header.png}}
+
+\setbeamertemplate{title page}
+{
+  \begin{tikzpicture}[remember picture,overlay]
+    \node[anchor=north west,xshift=-1.2mm,yshift=1.2mm] at (current page.north west){%
+      \noindent\inserttitlegraphic\par
+    };
+  \end{tikzpicture}
+  \vskip1em
+  \vbox{}
+  \begingroup
+  \centering
+  \usebeamercolor[fg]{titlegraphic}
+    \begin{beamercolorbox}[sep=8pt,center]{title}
+      \usebeamerfont{title}\inserttitle\par%
+      \ifx\insertsubtitle\@empty%
+      \else%
+        \vskip0.25em%
+        {\usebeamerfont{subtitle}\usebeamercolor[fg]{subtitle}\insertsubtitle\par}%
+      \fi%
+    \end{beamercolorbox}%
+    \vskip1em\par
+    \begin{beamercolorbox}[sep=8pt,center]{author}
+      \usebeamerfont{author}\insertauthor
+    \end{beamercolorbox}
+    \begin{beamercolorbox}[sep=8pt,center]{institute}
+      \usebeamerfont{institute}\insertinstitute
+    \end{beamercolorbox}
+    \begin{beamercolorbox}[sep=8pt,center]{date}
+      \usebeamerfont{date}\insertdate
+    \end{beamercolorbox}
+  \endgroup
+  \vfill
+}
+
 \setbeamertemplate{navigation symbols}{}
 \setbeamertemplate{blocks}[rounded][shadow=true]
 
