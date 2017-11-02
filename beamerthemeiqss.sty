@@ -78,12 +78,20 @@
 
 \AtBeginSection[]{
   \title{\insertsectionhead}
-  \frame{\frametitle{\iqsssectiontitleheader} \tableofcontents[currentsection]}
+  {
+    \definecolor{white}{rgb}{0.776,0.357,0.157}
+    \definecolor{iqss@orange}{rgb}{1,1,1}
+    \frame{\frametitle{\iqsssectiontitleheader} \tableofcontents[currentsection]}
+  }
 }
 
 \AtBeginPart{
   \title{\insertpart}
+  {
+    \definecolor{white}{rgb}{0.776,0.357,0.157}
+    \definecolor{iqss@orange}{rgb}{1,1,1}
     \frame{\frametitle{\iqsssectiontitleheader} \tableofcontents}
+  }
 }
 
 \mode
