@@ -16,6 +16,12 @@
 
 \hypersetup{colorlinks=true,allcolors=iqss@orange}
 
+\def \iqsssectiontitleheader {}
+
+\newcommand{\iqsssectiontitle}[1]{
+  \def \iqsssectiontitleheader{#1}
+}
+
 %\setbeamertemplate{footline}[frame number]
 \setbeamertemplate{footline}
 { \usebeamercolor[fg]{page number in head/foot}%
@@ -72,12 +78,12 @@
 
 \AtBeginSection[]{
   \title{\insertsectionhead}
-    \frame{\tableofcontents[currentsection]}
+  \frame{\frametitle{\iqsssectiontitleheader} \tableofcontents[currentsection]}
 }
 
 \AtBeginPart{
   \title{\insertpart}
-    \frame{\tableofcontents}
+    \frame{\frametitle{\iqsssectiontitleheader} \tableofcontents}
 }
 
 \mode
