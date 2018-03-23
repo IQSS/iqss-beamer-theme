@@ -26,7 +26,13 @@
 \setbeamertemplate{footline}
 { \usebeamercolor[fg]{page number in head/foot}%
   \usebeamerfont{page number in head/foot}%
-  \hspace{1em}\insertsectionhead\hfill%
+  \hspace{1em}\insertsectionhead%
+  \ifnum \thepage = \insertframeendpage
+       
+  \else
+  .
+  \fi
+  \hfill%
   \insertframenumber\,/\,\inserttotalframenumber\kern1em\vskip2pt%
 }
 
