@@ -27,12 +27,15 @@
 { \usebeamercolor[fg]{page number in head/foot}%
   \usebeamerfont{page number in head/foot}%
   \hspace{1em}\insertsectionhead%
-  \ifnum \thepage = \insertframeendpage
-       
-  \else
-  .
-  \fi
   \hfill%
+    \ifnum \thepage = \insertframeendpage{
+    \phantom{.}
+  }
+  \else{
+    .
+  }
+  \fi
+  \hspace{4em}
   \insertframenumber\,/\,\inserttotalframenumber\kern1em\vskip2pt%
 }
 
