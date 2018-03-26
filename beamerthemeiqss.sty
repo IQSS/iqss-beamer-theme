@@ -28,15 +28,10 @@
   \usebeamerfont{page number in head/foot}%
   \hspace{1em}\insertsectionhead%
   \hfill%
-    \ifnum \thepage = \insertframeendpage{
-    \phantom{.}
-  }
-  \else{
-    .
-  }
-  \fi
-  \hspace{4em}
-  \insertframenumber\,/\,\inserttotalframenumber\kern1em\vskip2pt%
+  \insertframenumber\,/\,\inserttotalframenumber
+  \ifnum \thepage = \insertframeendpage{\phantom{.}}\else{.}\fi
+  \hspace{1em}
+  \vskip2pt%
 }
 
 \titlegraphic{\includegraphics[width=\paperwidth]{header.png}}
