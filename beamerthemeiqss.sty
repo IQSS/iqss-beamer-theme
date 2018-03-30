@@ -28,7 +28,7 @@
   \usebeamerfont{page number in head/foot}%
   \hspace{1em}\insertsectionhead%
   \hfill%
-  \insertframenumber\,/\,\inserttotalframenumber
+  \insertframenumber\,/\,\hyperlinkappendixstart{\insertmainframenumber}
   \ifnum \thepage = \insertframeendpage{\small .}\else{\phantom{\small .}}\fi
   \hspace{1em}
   \vskip2pt%
@@ -85,16 +85,17 @@
   {
     \definecolor{white}{rgb}{0.776,0.357,0.157}
     \definecolor{iqss@orange}{rgb}{1,1,1}
-    \frame{\frametitle{\iqsssectiontitleheader} \tableofcontents[currentsection]}
-  }
-}
-
-\AtBeginPart{
-  \title{\insertpart}
-  {
-    \definecolor{white}{rgb}{0.776,0.357,0.157}
-    \definecolor{iqss@orange}{rgb}{1,1,1}
-    \frame{\frametitle{\iqsssectiontitleheader} \tableofcontents}
+    \ifnum \insertmainframenumber > \insertframenumber
+    \frame{
+      \frametitle{\iqsssectiontitleheader}
+      \tableofcontents[currentsection]
+    }
+    \else
+    \frame{
+      \frametitle{Backup Slides}
+      \tableofcontents[sectionstyle=shaded/shaded,subsectionstyle=shaded/shaded/shaded]
+    }
+    \fi
   }
 }
 
