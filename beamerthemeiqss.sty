@@ -22,6 +22,16 @@
   \def \iqsssectiontitleheader{#1}
 }
 
+\@ifundefined{insertmainframenumber}
+{%
+  % \insertmainframenumber not defined
+  \newcommand{\insertmainframenumber}{\inserttotalframenumber}
+}
+{%
+  % \insertmainframenumber already defined
+}%
+
+
 %\setbeamertemplate{footline}[frame number]
 \setbeamertemplate{footline}
 { \usebeamercolor[fg]{page number in head/foot}%
