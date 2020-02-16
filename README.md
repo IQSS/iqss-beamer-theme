@@ -16,8 +16,7 @@ expects that you will typeset your slides using
 
 # Installation
 Clone this repository and move the `.sty` files and `header.png` to your
-`$TEXMFHOME/tex/latex` directory, creating it if it doesn't exist. If
-you don't know where `$TEXMFHOME` is check your LaTeX distribution
+`$TEXMFHOME/tex/latex` directory, creating it if it doesn't exist. (Alternatively, you can leave the files where they are and create a symbolic link to this directory.). If you don't know where `$TEXMFHOME` is check your LaTeX distribution
 documentation, or run `kpsewhich -var-value TEXMFHOME` in a terminal.
 
 # Use
